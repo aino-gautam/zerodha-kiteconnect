@@ -5,7 +5,7 @@ package com.zerodhatech.kiteconnect.kitehttp.exceptions;
  * is received from Kite Connect api.
  */
 
-public class KiteException extends Throwable {
+public class KiteException extends Exception {
 
     // variables
     public String message;

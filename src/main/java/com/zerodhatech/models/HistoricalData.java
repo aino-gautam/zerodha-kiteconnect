@@ -20,6 +20,7 @@ public class HistoricalData {
     public long volume;
     public long oi;
     public List<HistoricalData> dataArrayList = new ArrayList<>();
+    public JSONObject result ; 
 
     public void parseResponse(JSONObject response) throws JSONException {
         JSONObject data = response.getJSONObject("data");
@@ -38,4 +39,8 @@ public class HistoricalData {
             dataArrayList.add(historicalData);
         }
     }
+
+	public void setResponse(JSONObject request) {
+		result = request ;
+	}
 }

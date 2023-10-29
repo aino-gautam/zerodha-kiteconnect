@@ -839,7 +839,8 @@ public class KiteConnect {
 
         String url = routes.get("market.historical").replace(":instrument_token", token).replace(":interval", interval);
         HistoricalData historicalData = new HistoricalData();
-        historicalData.parseResponse(kiteRequestHandler.getRequest(url, params, apiKey, accessToken));
+        historicalData.setResponse(kiteRequestHandler.getRequest(url, params, apiKey, accessToken));
+        //historicalData.parseResponse(kiteRequestHandler.getRequest(url, params, apiKey, accessToken));
         return historicalData;
     }
 
