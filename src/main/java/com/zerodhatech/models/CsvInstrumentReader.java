@@ -14,6 +14,9 @@ import org.supercsv.io.CsvBeanReader;
 import org.supercsv.io.ICsvBeanReader;
 import org.supercsv.prefs.CsvPreference;
 
+/**
+ * Deba implemented class to read instruments csv file with supercsv into instruments
+ */
 public class CsvInstrumentReader {
 	
 	private String filePath = null ;
@@ -25,7 +28,7 @@ public class CsvInstrumentReader {
 	/**
 	 * An example of reading using CsvBeanReader.
 	 */
-	private List<Instrument> readWithCsvBeanReader() throws Exception {
+	public List<Instrument> readWithCsvBeanReader() throws Exception {
 	        
 	        ICsvBeanReader beanReader = null;
 	        List<Instrument> instrumentsList = new ArrayList<Instrument>();
@@ -37,11 +40,10 @@ public class CsvInstrumentReader {
 	                final CellProcessor[] processors = getProcessors();
 	                
 	                Instrument instr;
-	                
 	               
 	                while( (instr = beanReader.read(Instrument.class, header, processors)) != null ) {
-	                        System.out.println(String.format("lineNo=%s, rowNo=%s, customer=%s", beanReader.getLineNumber(),
-	                                beanReader.getRowNumber(), instr));
+	                        //System.out.println(String.format("lineNo=%s, rowNo=%s, customer=%s", beanReader.getLineNumber(),
+	                        //        beanReader.getRowNumber(), instr));
 	                        
 	                        instrumentsList.add(instr);
 	                }
@@ -77,6 +79,7 @@ public class CsvInstrumentReader {
 	                new Optional(), // strike
 	                new Optional(new ParseDouble()), // tick_size
 	                new Optional(new ParseInt()), // lot_size
+	                new Optional(), // instrument_type
 	                new Optional(), // segment
 	                new Optional(), // exchange
 	                
