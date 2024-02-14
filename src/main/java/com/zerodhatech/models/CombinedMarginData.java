@@ -8,12 +8,12 @@ import java.util.List;
  */
 
 public class CombinedMarginData {
-    @SerializedName("initial")
-    public MarginCalculationData initialMargin;
+	@SerializedName("initial")
+	public MarginCalculationData initialMargin;
 
-    @SerializedName("final")
-    public MarginCalculationData finalMargin;
+	@SerializedName("final")
+	public MarginCalculationData finalMargin;
 
-    @SerializedName("orders")
-    public List<MarginCalculationData> orders;
+	@SerializedName("orders")
+	public List<MarginCalculationData> orders;
 }

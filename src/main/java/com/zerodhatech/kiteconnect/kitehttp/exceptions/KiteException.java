@@ -1,26 +1,26 @@
 package com.zerodhatech.kiteconnect.kitehttp.exceptions;
 
 /**
- * This is the base exception class which has a publicly accessible message and code that
- * is received from Kite Connect api.
+ * This is the base exception class which has a publicly accessible message and
+ * code that is received from Kite Connect api.
  */
 
 public class KiteException extends Exception {
 
-    // variables
-    public String message;
-    public int code;
+	// variables
+	public String message;
+	public int code;
 
-    // constructor that sets the message
-    public KiteException(String message){
-        super(message);
-        this.message = message;
-    }
+	// constructor that sets the message
+	public KiteException(String message) {
+		super(message);
+		this.message = message;
+	}
 
-    // constructor that sets the message and code
-    public KiteException(String message, int code){
-    	super(message);
-    	this.message = message;
-        this.code = code;
-    }
+	// constructor that sets the message and code
+	public KiteException(String message, int code) {
+		super(message);
+		this.message = message;
+		this.code = code;
+	}
 }

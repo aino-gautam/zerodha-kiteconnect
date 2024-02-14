@@ -8,91 +8,91 @@ import java.util.List;
  * Created by sujith on 9/21/19.
  */
 public class GTT {
-    @SerializedName("id")
-    public int id;
+	@SerializedName("id")
+	public int id;
 
-    @SerializedName("condition")
-    public Condition condition;
+	@SerializedName("condition")
+	public Condition condition;
 
-    @SerializedName("type")
-    public String triggerType;
+	@SerializedName("type")
+	public String triggerType;
 
-    @SerializedName("orders")
-    public List<GTTOrder> orders;
+	@SerializedName("orders")
+	public List<GTTOrder> orders;
 
-    @SerializedName("status")
-    public String status;
+	@SerializedName("status")
+	public String status;
 
-    @SerializedName("created_at")
-    public String createdAt;
+	@SerializedName("created_at")
+	public String createdAt;
 
-    @SerializedName("updated_at")
-    public String updatedAt;
+	@SerializedName("updated_at")
+	public String updatedAt;
 
-    @SerializedName("expires_at")
-    public String expiresAt;
+	@SerializedName("expires_at")
+	public String expiresAt;
 
-    @SerializedName("meta")
-    public GTTMeta meta;
+	@SerializedName("meta")
+	public GTTMeta meta;
 
-    public class GTTMeta {
-        @SerializedName("rejection_reason")
-        public String rejectionReason;
-    }
+	public class GTTMeta {
+		@SerializedName("rejection_reason")
+		public String rejectionReason;
+	}
 
-    public class Condition {
-        @SerializedName("instrument_token")
-        public int instrumentToken;
+	public class Condition {
+		@SerializedName("instrument_token")
+		public int instrumentToken;
 
-        @SerializedName("exchange")
-        public String exchange;
+		@SerializedName("exchange")
+		public String exchange;
 
-        @SerializedName("tradingsymbol")
-        public String tradingSymbol;
+		@SerializedName("tradingsymbol")
+		public String tradingSymbol;
 
-        @SerializedName("trigger_values")
-        public List<Double> triggerValues;
+		@SerializedName("trigger_values")
+		public List<Double> triggerValues;
 
-        @SerializedName("last_price")
-        public double lastPrice;
-    }
+		@SerializedName("last_price")
+		public double lastPrice;
+	}
 
-    public class GTTOrder {
-        @SerializedName("transaction_type")
-        public String transactionType;
+	public class GTTOrder {
+		@SerializedName("transaction_type")
+		public String transactionType;
 
-        @SerializedName("product")
-        public String product;
+		@SerializedName("product")
+		public String product;
 
-        @SerializedName("order_type")
-        public String orderType;
+		@SerializedName("order_type")
+		public String orderType;
 
-        @SerializedName("quantity")
-        public int quantity;
+		@SerializedName("quantity")
+		public int quantity;
 
-        @SerializedName("price")
-        public double price;
+		@SerializedName("price")
+		public double price;
 
-        @SerializedName("result")
-        public GTTResult result;
-    }
+		@SerializedName("result")
+		public GTTResult result;
+	}
 
-    public class GTTResult {
-        @SerializedName("order_result")
-        public GTTOrderResult orderResult;
+	public class GTTResult {
+		@SerializedName("order_result")
+		public GTTOrderResult orderResult;
 
-        @SerializedName("timestamp")
-        public String timestamp = "-";
+		@SerializedName("timestamp")
+		public String timestamp = "-";
 
-        @SerializedName("triggered_at")
-        public double triggeredAtPrice;
-    }
+		@SerializedName("triggered_at")
+		public double triggeredAtPrice;
+	}
 
-    public class GTTOrderResult {
-        @SerializedName("order_id")
-        public String orderId = "-";
+	public class GTTOrderResult {
+		@SerializedName("order_id")
+		public String orderId = "-";
 
-        @SerializedName("rejection_reason")
-        public String reason;
-    }
+		@SerializedName("rejection_reason")
+		public String reason;
+	}
 }

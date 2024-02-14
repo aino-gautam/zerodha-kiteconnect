@@ -5,6 +5,5 @@ package com.zerodhatech.kiteconnect.kitehttp;
  */
 public interface SessionExpiryHook {
 
-
-    public void sessionExpired();
+	public void sessionExpired();
 }

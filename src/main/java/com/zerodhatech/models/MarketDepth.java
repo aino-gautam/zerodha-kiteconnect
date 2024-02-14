@@ -8,8 +8,8 @@ import java.util.List;
  * A wrapper for market depth data.
  */
 public class MarketDepth {
-    @SerializedName("buy")
-    public List<Depth> buy;
-    @SerializedName("sell")
-    public List<Depth> sell;
+	@SerializedName("buy")
+	public List<Depth> buy;
+	@SerializedName("sell")
+	public List<Depth> sell;
 }

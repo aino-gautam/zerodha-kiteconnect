@@ -7,9 +7,9 @@ import com.zerodhatech.kiteconnect.kitehttp.exceptions.KiteException;
  */
 public interface OnError {
 
-    public void onError(Exception exception);
+	public void onError(Exception exception);
 
-    public void onError(KiteException kiteException);
+	public void onError(KiteException kiteException);
 
-    void onError(String error);
+	void onError(String error);
 }

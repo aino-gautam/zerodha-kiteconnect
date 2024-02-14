@@ -1,40 +1,42 @@
 package com.zerodhatech.models;
 
+import java.io.Serializable;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
  * A wrapper for market depth.
  */
-public class Depth  {
+public class Depth implements Serializable{
 
-    @SerializedName("quantity")
-    private int quantity;
-    @SerializedName("price")
-    private double price;
-    @SerializedName("orders")
-    private int orders;
+	@SerializedName("quantity")
+	private int quantity;
+	@SerializedName("price")
+	private double price;
+	@SerializedName("orders")
+	private int orders;
 
-    public int getQuantity() {
-        return quantity;
-    }
+	public int getQuantity() {
+		return quantity;
+	}
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
-    public double getPrice() {
-        return price;
-    }
+	public double getPrice() {
+		return price;
+	}
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+	public void setPrice(double price) {
+		this.price = price;
+	}
 
-    public int getOrders() {
-        return orders;
-    }
+	public int getOrders() {
+		return orders;
+	}
 
-    public void setOrders(int orders) {
-        this.orders = orders;
-    }
+	public void setOrders(int orders) {
+		this.orders = orders;
+	}
 }
