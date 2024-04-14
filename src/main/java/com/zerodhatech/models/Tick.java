@@ -31,7 +31,11 @@ public class Tick implements Serializable{
 	private double openPrice;
 	@SerializedName("closePrice")
 	private double closePrice;
-	@SerializedName("change")
+	
+	/**
+	 * The absolute change from yesterday's close to last traded price
+	 */
+	@SerializedName("change") 
 	private double change;
 	@SerializedName("lastTradeQuantity")
 	private double lastTradedQuantity;
@@ -221,5 +225,5 @@ public class Tick implements Serializable{
 		JSONObject jsonObject = new JSONObject(this);
 		return jsonObject.toString();
 	}
-	
+
 }
