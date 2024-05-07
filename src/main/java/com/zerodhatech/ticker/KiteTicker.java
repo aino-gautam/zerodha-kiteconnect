@@ -195,7 +195,7 @@ public class KiteTicker {
 			// convert to milliseconds
 			maxRetryInterval = interval * 1000;
 		} else {
-			throw new KiteException("Maximum retry interval can't be less than 0");
+			throw new KiteException("Maximum retry interval can't be less than 5");
 		}
 	}
 
