@@ -66,4 +66,9 @@ public class Order {
 	public Map<String, Object> meta;
 	@SerializedName("auction_number")
 	public String auctionNumber;
+
+	public String toString() {
+		return "Zerodha order - id =" + this.orderId + " type - " + transactionType +  " total quantity -"+ quantity + " filled - " + filledQuantity + "pending - " + pendingQuantity 
+				+ " status - " + this.status + " status message - " + statusMessage + " average price - " + averagePrice  ;  
+	}
 }

@@ -5,6 +5,7 @@ import com.zerodhatech.kiteconnect.KiteConnect;
 import com.zerodhatech.kiteconnect.kitehttp.exceptions.KiteException;
 import com.zerodhatech.kiteconnect.utils.Constants;
 import com.zerodhatech.models.*;
+import com.zerodhatech.models.GTTParams.GTTOrderParams;
 import com.zerodhatech.ticker.*;
 import org.json.JSONObject;
 import com.zerodhatech.models.Margin;
@@ -351,7 +352,7 @@ public class Examples {
 		order2Params.quantity = 1;
 
 		/** Target or upper trigger. */
-		List<GTTParams.GTTOrderParams> ordersList = new ArrayList();
+		List<GTTParams.GTTOrderParams> ordersList = new ArrayList<GTTOrderParams>();
 		ordersList.add(order1Params);
 		ordersList.add(order2Params);
 		gttParams.orders = ordersList;
